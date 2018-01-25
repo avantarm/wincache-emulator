@@ -6,7 +6,8 @@
     "wincache",
     "caching",
     "emulator",
-    "windows cache"
+    "windows",
+    "cache"
   ],
   "time": "2018-01-25",
   "license": "MIT",

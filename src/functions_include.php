@@ -18,8 +18,8 @@ if (!\function_exists('wincache_ucache_exists')) {
     /**
      * Gets a variable stored in the user cache.
      *
-     * @param mixed $key
-     * @param bool  $success
+     * @param  mixed $key
+     * @param  bool  $success
      * @return mixed
      * @see wincache_ucache_get()
      */
