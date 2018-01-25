@@ -4,6 +4,7 @@ namespace Avantarm {
 
     /**
      * Wincache emulator for user data caching functions.
+     *
      * @package Avantarm\WincacheEmulator
      */
     class WincacheEmulator
@@ -36,8 +37,8 @@ namespace Avantarm {
         }
 
         /**
-         * @param mixed $key
-         * @param bool $success
+         * @param  mixed $key
+         * @param  bool  $success
          * @return mixed
          * @see wincache_ucache_get()
          */
@@ -66,7 +67,7 @@ namespace Avantarm {
         /**
          * @param  mixed $key
          * @param  mixed $value
-         * @param  int $ttl
+         * @param  int   $ttl
          * @return mixed
          * @see wincache_ucache_set()
          */
@@ -92,7 +93,7 @@ namespace Avantarm {
         /**
          * @param  mixed $key
          * @param  mixed $value
-         * @param  int $ttl
+         * @param  int   $ttl
          * @return mixed
          * @see wincache_ucache_add()
          */
@@ -148,8 +149,8 @@ namespace Avantarm {
 
         /**
          * @param  string $key
-         * @param  int $inc_by
-         * @param  bool $success
+         * @param  int    $inc_by
+         * @param  bool   $success
          * @return mixed
          * @see wincache_ucache_inc()
          */
@@ -171,8 +172,8 @@ namespace Avantarm {
 
         /**
          * @param  string $key
-         * @param  int $dec_by
-         * @param  bool $success
+         * @param  int    $dec_by
+         * @param  bool   $success
          * @return mixed
          * @see wincache_ucache_dec()
          */
@@ -195,7 +196,8 @@ namespace Avantarm {
 
         /**
          * Retrieves information about data stored in the user cache.
-         * @param  bool $summaryonly
+         *
+         * @param  bool   $summaryonly
          * @param  string $key
          * @return array
          * @see wincache_ucache_info()

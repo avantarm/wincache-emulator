@@ -5,6 +5,7 @@ use Avantarm\WincacheEmulator;
 if (!\function_exists('wincache_ucache_exists')) {
     /**
      * Checks if a variable exists in the user cache.
+     *
      * @param  string $key
      * @return bool
      * @see wincache_ucache_exists()
@@ -16,8 +17,9 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Gets a variable stored in the user cache.
+     *
      * @param mixed $key
-     * @param bool $success
+     * @param bool  $success
      * @return mixed
      * @see wincache_ucache_get()
      */
@@ -28,9 +30,10 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Adds a variable in user cache and overwrites a variable if it already exists in the cache.
+     *
      * @param  mixed $key
      * @param  mixed $value
-     * @param  int $ttl
+     * @param  int   $ttl
      * @return mixed
      * @see wincache_ucache_set()
      */
@@ -41,9 +44,10 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Adds a variable in user cache only if variable does not already exist in the cache.
+     *
      * @param  mixed $key
      * @param  mixed $value
-     * @param  int $ttl
+     * @param  int   $ttl
      * @return mixed
      * @see wincache_ucache_add()
      */
@@ -54,6 +58,7 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Increments the value associated with the key.
+     *
      * @param  mixed $key
      * @return mixed
      * @see wincache_ucache_delete()
@@ -65,8 +70,8 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * @param  string $key
-     * @param  int $inc_by
-     * @param  bool $success
+     * @param  int    $inc_by
+     * @param  bool   $success
      * @return mixed
      * @see wincache_ucache_inc()
      */
@@ -77,9 +82,10 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Decrements the value associated with the key.
+     *
      * @param  string $key
-     * @param  int $dec_by
-     * @param  bool $success
+     * @param  int    $dec_by
+     * @param  bool   $success
      * @return mixed
      * @see wincache_ucache_inc()
      */
@@ -90,6 +96,7 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Deletes entire content of the user cache.
+     *
      * @return  bool
      * @see wincache_ucache_clear()
      */
@@ -100,7 +107,8 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Retrieves information about data stored in the user cache.
-     * @param  bool $summaryonly
+     *
+     * @param  bool   $summaryonly
      * @param  string $key
      * @return array
      * @see wincache_ucache_info()
@@ -112,6 +120,7 @@ if (!\function_exists('wincache_ucache_exists')) {
 
     /**
      * Retrieves information about user cache memory usage
+     *
      * @return array|false Array of meta data about user cache memory usage or FALSE on failure.
      */
     function wincache_ucache_meminfo()
