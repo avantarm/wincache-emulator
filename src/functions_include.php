@@ -4,6 +4,71 @@ use Avantarm\WincacheEmulator;
 
 if (!\function_exists('wincache_ucache_exists')) {
     /**
+     * Adds a variable in user cache only if variable does not already exist in the cache.
+     *
+     * @param  mixed $key
+     * @param  mixed $value
+     * @param  int   $ttl
+     * @return mixed
+     * @see wincache_ucache_add()
+     */
+    function wincache_ucache_add($key, $value, $ttl = 0)
+    {
+        return WincacheEmulator::add($key, $value, $ttl);
+    }
+
+    /**
+     *  Compares the variable with old value and assigns new value to it.
+     *
+     * @param  string $key
+     * @param  int    $old_value
+     * @param  int    $new_value
+     * @return bool
+     * @see wincache_ucache_cas()
+     */
+    function wincache_ucache_cas($key, $old_value, $new_value)
+    {
+        return WincacheEmulator::cas($key, $old_value, $new_value);
+    }
+
+    /**
+     * Deletes entire content of the user cache.
+     *
+     * @return  bool
+     * @see wincache_ucache_clear()
+     */
+    function wincache_ucache_clear()
+    {
+        return WincacheEmulator::clear();
+    }
+
+    /**
+     * Decrements the value associated with the key.
+     *
+     * @param  string $key
+     * @param  int    $dec_by
+     * @param  bool   $success
+     * @return mixed
+     * @see wincache_ucache_inc()
+     */
+    function wincache_ucache_dec($key, $dec_by = 1, &$success = null)
+    {
+        return WincacheEmulator::dec($key, $dec_by, $success);
+    }
+
+    /**
+     * Increments the value associated with the key.
+     *
+     * @param  mixed $key
+     * @return mixed
+     * @see wincache_ucache_delete()
+     */
+    function wincache_ucache_delete($key)
+    {
+        return WincacheEmulator::delete($key);
+    }
+
+    /**
      * Checks if a variable exists in the user cache.
      *
      * @param  string $key
@@ -29,46 +94,6 @@ if (!\function_exists('wincache_ucache_exists')) {
     }
 
     /**
-     * Adds a variable in user cache and overwrites a variable if it already exists in the cache.
-     *
-     * @param  mixed $key
-     * @param  mixed $value
-     * @param  int   $ttl
-     * @return mixed
-     * @see wincache_ucache_set()
-     */
-    function wincache_ucache_set($key, $value, $ttl = 0)
-    {
-        return WincacheEmulator::set($key, $value, $ttl);
-    }
-
-    /**
-     * Adds a variable in user cache only if variable does not already exist in the cache.
-     *
-     * @param  mixed $key
-     * @param  mixed $value
-     * @param  int   $ttl
-     * @return mixed
-     * @see wincache_ucache_add()
-     */
-    function wincache_ucache_add($key, $value, $ttl = 0)
-    {
-        return WincacheEmulator::add($key, $value, $ttl);
-    }
-
-    /**
-     * Increments the value associated with the key.
-     *
-     * @param  mixed $key
-     * @return mixed
-     * @see wincache_ucache_delete()
-     */
-    function wincache_ucache_delete($key)
-    {
-        return WincacheEmulator::delete($key);
-    }
-
-    /**
      * @param  string $key
      * @param  int    $inc_by
      * @param  bool   $success
@@ -78,31 +103,6 @@ if (!\function_exists('wincache_ucache_exists')) {
     function wincache_ucache_inc($key, $inc_by = 1, &$success = null)
     {
         return WincacheEmulator::inc($key, $inc_by, $success);
-    }
-
-    /**
-     * Decrements the value associated with the key.
-     *
-     * @param  string $key
-     * @param  int    $dec_by
-     * @param  bool   $success
-     * @return mixed
-     * @see wincache_ucache_inc()
-     */
-    function wincache_ucache_dec($key, $dec_by = 1, &$success = null)
-    {
-        return WincacheEmulator::dec($key, $dec_by, $success);
-    }
-
-    /**
-     * Deletes entire content of the user cache.
-     *
-     * @return  bool
-     * @see wincache_ucache_clear()
-     */
-    function wincache_ucache_clear()
-    {
-        return WincacheEmulator::clear();
     }
 
     /**
@@ -126,5 +126,19 @@ if (!\function_exists('wincache_ucache_exists')) {
     function wincache_ucache_meminfo()
     {
         return WincacheEmulator::meminfo();
+    }
+
+    /**
+     * Adds a variable in user cache and overwrites a variable if it already exists in the cache.
+     *
+     * @param  mixed $key
+     * @param  mixed $value
+     * @param  int   $ttl
+     * @return mixed
+     * @see wincache_ucache_set()
+     */
+    function wincache_ucache_set($key, $value, $ttl = 0)
+    {
+        return WincacheEmulator::set($key, $value, $ttl);
     }
 }
