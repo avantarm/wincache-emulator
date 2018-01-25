@@ -1,0 +1,55 @@
+{
+  "name": "avantarm/wincache-emulator",
+  "type": "library",
+  "description": "WinCache PHP extension emulator for non-IIS environments.",
+  "keywords": [
+    "wincache",
+    "caching",
+    "emulator",
+    "windows cache"
+  ],
+  "time": "2018-01-25",
+  "license": "MIT",
+  "homepage": "https://www.avantarm.com",
+  "support": {
+    "issues": "https://github.com/avantarm/wincache-emulator/issues",
+    "source": "https://github.com/avantarm/wincache-emulator"
+  },
+  "authors": [
+    {
+      "name": "Avantarm",
+      "email": "avantarm@gmail.com"
+    }
+  ],
+  "conflict": {
+    "ext-wincache": "*"
+  },
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.3"
+  },
+  "autoload": {
+    "files": [
+      "src/functions_include.php"
+    ],
+    "psr-4": {
+      "Avantarm\\WincacheEmulator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "files": [
+      "src/functions_include.php"
+    ],
+    "psr-4": {
+      "Avantarm\\WincacheEmulator\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
