@@ -2,7 +2,7 @@
 
 WinCache PHP extension emulator for non-IIS environments.
 
-Emulates user cache functions of Windows Cache Extension for PHP.
+Emulates user cache functions of Windows Cache extension for PHP.
  
 ## Installation via Composer
 
