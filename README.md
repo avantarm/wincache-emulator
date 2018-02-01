@@ -1,9 +1,5 @@
 # WinCache emulator
 
-[![Latest Stable Version](https://poser.pugx.org/avantarm/wincache-emulator/v/stable)](https://packagist.org/packages/avantarm/wincache-emulator) 
-[![Total Downloads](https://poser.pugx.org/avantarm/wincache-emulator/downloads)](https://packagist.org/packages/avantarm/wincache-emulator)
-[![Latest Unstable Version](https://poser.pugx.org/avantarm/wincache-emulator/v/unstable)](https://packagist.org/packages/avantarm/wincache-emulator) 
-[![License](https://poser.pugx.org/avantarm/wincache-emulator/license)](https://packagist.org/packages/avantarm/wincache-emulator)
 
 WinCache PHP extension emulator for non-IIS environments.
 
