@@ -1,4 +1,4 @@
-# WinCache emulator
+# WinCache emulator [![Build Status](https://travis-ci.org/avantarm/wincache-emulator.png?branch=master)](https://travis-ci.org/avantarm/wincache-emulator)
 
 [![Latest Stable Version](https://poser.pugx.org/avantarm/wincache-emulator/v/stable)](https://packagist.org/packages/avantarm/wincache-emulator) 
 [![Total Downloads](https://poser.pugx.org/avantarm/wincache-emulator/downloads)](https://packagist.org/packages/avantarm/wincache-emulator)
