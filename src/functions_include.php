@@ -1,6 +1,6 @@
 <?php
 
-use Avantarm\WincacheEmulator;
+use Avantarm\WincacheEmulator\WincacheEmulator;
 
 if (!\function_exists('wincache_ucache_exists')) {
     /**
